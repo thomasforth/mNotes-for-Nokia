@@ -1,0 +1,919 @@
+/*
+© Copyright 2008 Nokia Corporation. All rights reserved.
+
+IMPORTANT:  The Nokia software ("WRTKit and Example Widget files") is supplied to you by Nokia
+Corporation (“Nokia”) in consideration of your agreement to the following terms. Your use, installation
+and/or redistribution of the WRTKit and Example Widget files constitutes acceptance of these terms. If
+you do not agree with these terms, please do not use, install, or redistribute the WRTKit and Example
+Widget files.
+
+In consideration of your agreement to abide by the following terms, and subject to these terms, Nokia
+grants you a personal, non-exclusive license, under Nokia’s copyrights in the WRTKit and Example
+Widget files, to use, reproduce, and redistribute the WRTKit and Example files, in text form (for HTML,
+CSS, or JavaScript files) or binary form (for associated images), for the sole purpose of creating S60
+Widgets.
+
+If you redistribute the WRTKit and Example files, you must retain this entire notice in all such
+redistributions of the WRTKit and Example files.
+
+You may not use the name, trademarks, service marks or logos of Nokia to endorse or promote products
+that include the WRTKit and Example files without the prior written explicit agreement with Nokia.
+Except as expressly stated in this notice, no other rights or licenses, express or implied, are granted by
+Nokia herein, including but not limited to any patent rights that may be infringed by your products that
+incorporate the WRTKit and Example files or by other works in which the WRTKit and Example files
+may be incorporated.
+
+The WRTKit and Example files are provided on an "AS IS" basis.  NOKIA MAKES NO
+WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
+WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE, REGARDING THE EXAMPLES OR ITS USE AND OPERATION
+ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
+
+IN NO EVENT SHALL NOKIA BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION, AND/OR
+DISTRIBUTION OF THE EXAMPLES, HOWEVER CAUSED AND WHETHER UNDER THEORY
+OF CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE,
+EVEN IF NOKIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+/******************************************************************************/
+/*        Definition of visuals for the WRTKit user interface toolkit         */
+/******************************************************************************/
+
+/******************************************************************************/
+/* Document body rules */
+
+body {
+    margin: 0px;
+    /*background: url("DocumentBackground.png") repeat-x fixed;*/
+    background-color:Black;
+    font: normal 12px Arial, sans-serif;
+    color: rgb(0,0,0);
+}
+
+
+/******************************************************************************/
+/* Override default WRT styling for HTML form controls */
+
+/* Textarea when focused */
+textarea:focus {
+    outline: none;
+}
+
+/* Textarea when hovering */
+textarea:hover {
+    outline: none;
+}
+
+/* Select elements when focused */
+select:focus {
+    outline: none;
+}
+
+/* Select elements when hovering */
+select:hover {
+    outline: none;
+}
+
+/* Input elements when focused */
+input:focus {
+    outline: none;
+}
+
+/* Input elements when hovering */
+input:hover {
+    outline: none;
+}
+
+/* Link elements */
+a {
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+/* Links when focused */
+a:focus {
+    background: none;
+    outline: none;
+}
+
+/* Links when hovering */
+a:hover {
+    background: none;
+    outline: none;
+}
+
+
+/******************************************************************************/
+/* Rules for default view and document scrollbar containers */
+
+/* Default view container rules */
+.ViewContainer {
+    margin: 0px 0px 0px 0px;
+}
+
+/* Default document scrollbar container rules */
+.DocumentScrollbarContainer {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 7px;
+}
+
+
+/******************************************************************************/
+/* View style rules */
+
+/* Rules for the list view */
+.ListView {
+    margin: 0px 0px 0px 0px;
+}
+
+/* Rules for the list view caption */
+.ListViewCaption {
+    background: url("ListViewCaptionBackground.png");
+    height: 35px;
+}
+
+/* Rules for the list view caption text */
+.ListViewCaptionText {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px 0px 0px 11px;
+}
+
+/* Rules for the list view control list element */
+.ListViewControlList {
+    margin: 1px 10px 1px 3px;
+}
+
+
+/******************************************************************************/
+/* Control style rules */
+
+/* Rules for control root element (rootElement) */
+.Control {
+    
+}
+
+/* Control assembly rules (assemblyElement) */
+.ControlAssembly {
+    /*background: url("ControlAssemblyBackground.png") repeat-x;*/
+    
+    padding: 1px 5px;
+}
+
+/* Control assembly in normal state */
+.ControlAssemblyNormal {
+    /*background-position: 0px 0px;*/
+}
+
+/* Control assembly in focused state */
+.ControlAssemblyFocus {
+    /*background-position: 0px -250px;*/
+    background-color:#fdc927;
+}
+
+/* Control assembly in hovering state */
+.ControlAssemblyHover {
+    /*background-position: 0px -500px;*/
+    background-color:#fdc927;
+}
+
+/* Control assembly in disabled state */
+.ControlAssemblyDisabled {
+    background-position: 0px 0px;
+}
+
+/* Caption for controls (captionElement) */
+.ControlCaption {
+    font-weight: bold;
+    padding: 3px 0px 0px 3px;
+}
+
+/* Caption for controls in normal state */
+.ControlCaptionNormal {
+    
+}
+
+/* Caption for controls when focused */
+.ControlCaptionFocus {
+    color: rgb(255,255,255);
+}
+
+/* Caption for controls when hovering */
+.ControlCaptionHover {
+    
+}
+
+/* Caption for controls when disabled */
+.ControlCaptionDisabled {
+    color: rgb(125,125,125);
+}
+
+/* Control element rules (controlElement) */
+.ControlElement {
+    padding: 3px 3px 3px 3px;
+}
+
+/******************************************************************************/
+/* Label */
+
+/* Rules for the text value of a Label control */
+
+
+.LabelText {
+}
+
+
+/******************************************************************************/
+/* ContentPanel */
+
+/* Caption area rules for non-foldable content panels */
+.ContentPanelCaptionNonFoldable {
+    padding: 3px 0px 0px 3px;
+}
+
+/* Caption area rules for foldable content panels */
+.ContentPanelCaptionFoldable {
+    padding: 4px 0px 3px 3px;
+}
+
+/* Rules for fold toggling element in content panel */
+.ContentPanelFoldToggle {
+    background: url("ContentPanelFoldIcons.png") no-repeat;
+    padding-left: 16px;
+}
+
+/* Collapsed fold */
+.ContentPanelFoldToggleCollapsed {
+    background-position: 0px 0px;
+}
+
+/* Expanded fold */
+.ContentPanelFoldToggleExpanded {
+    background-position: 0px -50px;
+}
+
+/* Rules for the content panel caption text */
+.ContentPanelCaptionText {
+    font-weight: bold;
+}
+
+/* Caption text for content panel in normal state */
+.ContentPanelCaptionTextNormal {
+    
+}
+
+/* Caption text for content panel when focused */
+.ContentPanelCaptionTextFocus {
+    color: rgb(255,255,255);
+}
+
+/* Caption text for content panel when hovering */
+.ContentPanelCaptionTextHover {
+    
+}
+
+/* Caption text for content panel when disabled */
+.ContentPanelCaptionTextDisabled {
+    color: rgb(125,125,125);
+}
+
+/* Rules for content in the content panel */
+.ContentPanelContent {
+    padding: 2px 2px 2px 8px;
+}
+
+
+/******************************************************************************/
+/* FormButton */
+
+/* Rules for form button */
+.FormButton {
+    
+}
+
+/* Rules for form button control element */
+.FormButtonControlElement {
+    
+}
+
+/* Rules for form button table (table) */
+.FormButtonTable {
+    width: 100%;
+    border-spacing: 0px;
+    padding: 0px;
+    table-layout: fixed;
+}
+
+/* Form button row (tr) */
+.FormButtonRow {
+    padding: 0px;
+}
+
+/* Rules for form button left cell (td) */
+.FormButtonLeftCell {
+    width: 8px;
+    height: 26px;
+    background: url("FormButtonLeft.png") no-repeat;
+    padding: 0px;
+}
+
+/* Rules for form button center cell (td) */
+.FormButtonCenterCell {
+    height: 26px;
+    background: url("FormButtonCenter.png") repeat-x;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Rules for form button right cell (td) */
+.FormButtonRightCell {
+    width: 8px;
+    height: 26px;
+    background: url("FormButtonRight.png") no-repeat;
+    padding: 0px;
+}
+
+/* Rules for form button left cell in normal state (td) */
+.FormButtonLeftCellNormal {
+    background-position: 0px 0px;
+}
+
+/* Rules for form button left cell in focused state (td) */
+.FormButtonLeftCellFocus {
+    background-position: 0px -50px;
+}
+
+/* Rules for form button left cell in hover state (td) */
+.FormButtonLeftCellHover {
+    background-position: 0px -100px;
+}
+
+/* Rules for form button left cell in disabled state (td) */
+.FormButtonLeftCellDisabled {
+    background-position: 0px -150px;
+}
+
+/* Rules for form button center cell in normal state (td) */
+.FormButtonCenterCellNormal {
+    background-position: 0px 0px;
+}
+
+/* Rules for form button center cell in focused state (td) */
+.FormButtonCenterCellFocus {
+    background-position: 0px -50px;
+}
+
+/* Rules for form button center cell in hover state (td) */
+.FormButtonCenterCellHover {
+    background-position: 0px -100px;
+}
+
+/* Rules for form button center cell in disabled state (td) */
+.FormButtonCenterCellDisabled {
+    background-position: 0px -150px;
+}
+
+/* Rules for form button left cell in normal state (td) */
+.FormButtonRightCellNormal {
+    background-position: 0px 0px;
+}
+
+/* Rules for form button left cell in focused state (td) */
+.FormButtonRightCellFocus {
+    background-position: 0px -50px;
+}
+
+/* Rules for form button left cell in hover state (td) */
+.FormButtonRightCellHover {
+    background-position: 0px -100px;
+}
+
+/* Rules for form button left cell in disabled state (td) */
+.FormButtonRightCellDisabled {
+    background-position: 0px -150px;
+}
+
+/* Rules for form button text */
+.FormButtonText {
+    font-weight: bold;
+}
+
+/* Form button text in normal state */
+.FormButtonTextNormal {
+    color: rgb(255,255,255);
+}
+
+/* Form button text when focused */
+.FormButtonTextFocus {
+    color: rgb(255,255,255);
+}
+
+/* Form button text when hovering */
+.FormButtonTextHover {
+    color: rgb(255,255,255);
+}
+
+/* Form button text when disabled */
+.FormButtonTextDisabled {
+    color: rgb(200,200,200);
+}
+
+
+/******************************************************************************/
+/* NavigationButton */
+
+/* Rules for navigation button */
+
+
+.NavigationButton {
+}
+
+/* Rules for navigation button control element */
+.NavigationButtonControlElement {
+    padding: 3px 3px 3px 3px;
+}
+
+/* Rules for navigation button table (table) */
+.NavigationButtonTable {
+    border-spacing: 0px;
+    padding: 0px;
+}
+
+/* Navigation button row (tr) */
+.NavigationButtonRow {
+    padding: 0px;
+}
+
+/* Rules for navigation button image cell (td) */
+.NavigationButtonImageCell {
+    line-height: 1px;
+    font-size: 1px;
+    /*vertical-align: middle;*/
+    vertical-align: top;
+}
+
+/* Rules for navigation button text cell (td) */
+.NavigationButtonTextCell {
+    vertical-align: middle;
+    padding: 0px;
+}
+
+/* Rules for navigation button image */
+.NavigationButtonImage {
+    padding: 0px 5px 0px 0px;
+}
+
+/* Rules for navigation button text */
+.NavigationButtonText {
+    font-weight: bold;
+}
+
+/* Navigation button text in normal state */
+.NavigationButtonTextNormal {
+    
+}
+
+/* Navigation button text when focused */
+.NavigationButtonTextFocus {
+    color: rgb(255,255,255);
+}
+
+/* Navigation button text when hovering */
+.NavigationButtonTextHover {
+    
+}
+
+/* Navigation button text when disabled */
+.NavigationButtonTextDisabled {
+    color: rgb(125,125,125);
+}
+
+
+/******************************************************************************/
+/* TextField */
+
+/* Rules for textField */
+.TextField {
+    width: 100%;
+    border: 1px solid rgb(0,0,0);
+    background: rgb(255,255,255);
+    margin: 0px 0px 3px 0px;
+}
+
+/* TextField in normal state */
+.TextFieldNormal {
+    
+}
+
+/* TextField in focus state */
+.TextFieldFocus {
+    
+}
+
+/* TextField in hover state */
+.TextFieldHover {
+    
+}
+
+/* TextField in disabled state */
+.TextFieldDisabled {
+    color: rgb(50,50,50);
+    background: rgb(200,200,200);
+}
+
+
+/******************************************************************************/
+/* TextArea */
+
+/* Rules for TextArea */
+.TextArea {
+    width: 100%;
+    border: 1px solid rgb(0,0,0);
+    background: rgb(255,255,255);
+    margin: 0px 0px 3px 0px;
+}
+
+/* TextArea in normal state */
+.TextAreaNormal {
+    
+}
+
+/* TextArea in focus state */
+.TextAreaFocus {
+    
+}
+
+/* TextArea in hover state */
+.TextAreaHover {
+    
+}
+
+/* TextArea in disabled state */
+.TextAreaDisabled {
+    color: rgb(50,50,50);
+    background: rgb(200,200,200);
+}
+
+
+/******************************************************************************/
+/* Separator */
+
+/* Rules for Separator (table) */
+.Separator {
+    width: 100%;
+    padding: 0px;
+    border-spacing: 0px;
+    table-layout: fixed;
+    margin: 3px 0px;
+}
+
+/* Separator row (tr) */
+.SeparatorRow {
+    padding: 0px;
+}
+
+/* Separator left cell (td) */
+.SeparatorLeftCell {
+    width: 5px;
+    height: 2px;
+    background: url("SeparatorLeft.png") no-repeat;
+    padding: 0px;
+}
+
+/* Separator center cell (td) */
+.SeparatorCenterCell {
+    height: 2px;
+    background: url("SeparatorCenter.png") repeat-x;
+    padding: 0px;
+}
+
+/* Separator right cell (td) */
+.SeparatorRightCell {
+    width: 6px;
+    height: 2px;
+    background: url("SeparatorRight.png") no-repeat;
+    padding: 0px;
+}
+
+
+/******************************************************************************/
+/* SelectionMenu */
+
+/* Rules for SelectionMenu select element */
+.SelectionMenu {
+    width: 100%;
+    border: 1px solid rgb(0,0,0);
+    background: rgb(255,255,255);
+    margin: 0px 0px 3px 0px;
+}
+
+/* SelectionMenu in normal state */
+.SelectionMenuNormal {
+    
+}
+
+/* SelectionMenu in focus state */
+.SelectionMenuFocus {
+    
+}
+
+/* SelectionMenu in hover state */
+.SelectionMenuHover {
+    
+}
+
+/* SelectionMenu in disabled state */
+.SelectionMenuDisabled {
+    color: rgb(50,50,50);
+    background: rgb(200,200,200);
+}
+
+/* Rules for SelectionMenu option elements */
+.SelectionMenuOption {
+    background: rgb(255,255,255);
+}
+
+/* SelectionMenu option in normal state */
+.SelectionMenuOptionNormal {
+    
+}
+
+/* SelectionMenu option in focus state */
+.SelectionMenuOptionFocus {
+    
+}
+
+/* SelectionMenu option in hover state */
+.SelectionMenuOptionHover {
+    
+}
+
+/* SelectionMenu option in disabled state */
+.SelectionMenuOptionDisabled {
+    color: rgb(50,50,50);
+    background: rgb(200,200,200);
+}
+
+
+/******************************************************************************/
+/* SelectionList */
+
+/* SelectionList option list element */
+.SelectionList {
+    
+}
+
+/* SelectionList option list element in normal state */
+.SelectionListNormal {
+    
+}
+
+/* SelectionList option list element in focus state */
+.SelectionListFocus {
+    
+}
+
+/* SelectionList option list element in hover state */
+.SelectionListHover {
+    
+}
+
+/* SelectionList option list element in disabled state */
+.SelectionListDisabled {
+    
+}
+
+/* SelectionList option element in single selection mode */
+.SelectionListOptionSingle {
+    padding-left: 19px;
+    background: url("RadioButton.png") no-repeat;
+    height: 16px;
+}
+
+/* SelectionList option element in single selection mode, unchecked normal state */
+.SelectionListOptionSingleUncheckedNormal {
+    background-position: 0px 0px;
+}
+
+/* SelectionList option element in single selection mode, unchecked focus state */
+.SelectionListOptionSingleUncheckedFocus {
+    background-position: 0px -50px;
+}
+
+/* SelectionList option element in single selection mode, unchecked diabled state */
+.SelectionListOptionSingleUncheckedDisabled {
+    background-position: 0px -100px;
+}
+
+/* SelectionList option element in single selection mode, checked normal state */
+.SelectionListOptionSingleCheckedNormal {
+    background-position: 0px -150px;
+}
+
+/* SelectionList option element in single selection mode, checked focus state */
+.SelectionListOptionSingleCheckedFocus {
+    background-position: 0px -200px;
+}
+
+/* SelectionList option element in single selection mode, checked diabled state */
+.SelectionListOptionSingleCheckedDisabled {
+    background-position: 0px -250px;
+}
+
+/* SelectionList option element in multi selection mode */
+.SelectionListOptionMulti {
+    padding-left: 19px;
+    background: url("CheckBox.png") no-repeat;
+    height: 16px;
+}
+
+/* SelectionList option element in multi selection mode, unchecked normal state */
+.SelectionListOptionMultiUncheckedNormal {
+    background-position: 0px 0px;
+}
+
+/* SelectionList option element in multi selection mode, unchecked focus state */
+.SelectionListOptionMultiUncheckedFocus {
+    background-position: 0px -50px;
+}
+
+/* SelectionList option element in multi selection mode, unchecked diabled state */
+.SelectionListOptionMultiUncheckedDisabled {
+    background-position: 0px -100px;
+}
+
+/* SelectionList option element in multi selection mode, checked normal state */
+.SelectionListOptionMultiCheckedNormal {
+    background-position: 0px -150px;
+}
+
+/* SelectionList option element in multi selection mode, checked focus state */
+.SelectionListOptionMultiCheckedFocus {
+    background-position: 0px -200px;
+}
+
+/* SelectionList option element in multi selection mode, checked diabled state */
+.SelectionListOptionMultiCheckedDisabled {
+    background-position: 0px -250px;
+}
+
+/* SelectionList option text */
+.SelectionListOptionText {
+    
+}
+
+/* SelectionList option text in normal state */
+.SelectionListOptionTextNormal {
+    
+}
+
+/* SelectionList option text in focus state */
+.SelectionListOptionTextFocus {
+    color: rgb(255,255,255);
+}
+
+/* SelectionList option text in hover state */
+.SelectionListOptionTextHover {
+    
+}
+
+/* SelectionList option text in disabled state */
+.SelectionListOptionTextDisabled {
+    color: rgb(125,125,125);
+}
+
+
+/******************************************************************************/
+/* Scrollbar */
+
+/* Scrollbar root element */
+.Scrollbar {
+    position: absolute;
+    height: 100%;
+    width: 7px;
+}
+
+/* Top portion of scrollbar track */
+.ScrollbarTrackTop {
+    position: absolute;
+    background: url("ScrollbarTrackTop.png") no-repeat;
+    width: 7px;
+    height: 4px;
+}
+
+/* Middle portion of scrollbar track */
+.ScrollbarTrackMiddle {
+    position: absolute;
+    background: url("ScrollbarTrackMiddle.png") repeat-y;
+    width: 7px;
+}
+
+/* Bottom portion of scrollbar track */
+.ScrollbarTrackBottom {
+    position: absolute;
+    background: url("ScrollbarTrackBottom.png") no-repeat;
+    width: 7px;
+    height: 4px;
+}
+
+/* Top portion of scrollbar thumb */
+.ScrollbarThumbTop {
+    position: absolute;
+    background: url("ScrollbarThumbTop.png") no-repeat;
+    width: 7px;
+    height: 5px;
+}
+
+/* Middle portion of scrollbar thumb */
+.ScrollbarThumbMiddle {
+    position: absolute;
+    background: url("ScrollbarThumbMiddle.png") repeat-y;
+    width: 7px;
+}
+
+/* Bottom portion of scrollbar thumb */
+.ScrollbarThumbBottom {
+    position: absolute;
+    background: url("ScrollbarThumbBottom.png") no-repeat;
+    width: 7px;
+    height: 5px;
+}
+
+
+/******************************************************************************/
+/* NotificationPopup */
+
+/* Container that defines the area for the popup dialog */
+.NotificationPopupContainer {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -115px;
+    width: 230px;
+    height: 85px;
+}
+
+/* Notification popup dialog */
+.NotificationPopup {
+    position: absolute;
+    width: 230px;
+    height: 85px;
+    background: url("NotificationPopupBackground.png") repeat-x;
+    border: 1px solid rgb(0,0,0);
+}
+
+/* Notification type indicator */
+.NotificationPopupTypeIndicator {
+    position: absolute;
+    left: 195px;
+    top: 10px;
+    width: 24px;
+    height: 34px;
+    background: url("NotificationPopupTypeIndicator.png") no-repeat;
+}
+
+/* Notification type indicator for notifications of undefined type */
+.NotificationPopupTypeIndicatorNone {
+    background-position: 0px 0px;
+}
+
+/* Notification type indicator for info notifications */
+.NotificationPopupTypeIndicatorInfo {
+    background-position: 0px -50px;
+}
+
+/* Notification type indicator for warning notifications */
+.NotificationPopupTypeIndicatorWarning {
+    background-position: 0px -100px;
+}
+
+/* Notification type indicator for wait notifications */
+.NotificationPopupTypeIndicatorWait {
+    background-position: 0px -150px;
+}
+
+/* Notification text area */
+.NotificationPopupText {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    width: 180px;
+    height: 50px;
+}
+
+/* Progress bar */
+.NotificationPopupProgressBar {
+    position: absolute;
+    left: 6px;
+    top: 60px;
+    width: 218px;
+    height: 16px;
+}

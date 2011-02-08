@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="css/s60v3.css" rel="stylesheet" type="text/css" />
+        <link href="css/landscapetouch.css" rel="stylesheet" type="text/css" />
+        <link href="css/portraittouch.css" rel="stylesheet" type="text/css" />
+        <link href="css/landscapes60v5.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/checkapi.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
+        <script type="text/javascript" src="js/platformservices.js"></script>
+        <script type="text/javascript" src="js/md5.js"></script>
+        <script type="text/javascript" src="js/gallerycreation.js"></script>
+        <script type="text/javascript" src="js/apibridge.js"></script>
+        <script type="text/javascript" src="js/photo.js"></script>
+        <script type="text/javascript" src="js/callASync.js"></script>
+        <script type="text/javascript" src="basic.js"></script>
+        <script type="text/javascript" src="WRTKit/WRTKit.js"></script>
+        <meta name="generator" content="Nokia WRT extension for Visual Studio 2.0" />
+    </head>
+    <body class="body" onload="init()">
+    <div id="s60v3rightpad">
+            <p id="camerabutton" class="button"><img class="rightpadbutton" alt="" src="img/camerayellow.png" onclick="takePhoto()"/>New Note</p>
+            <p id="gallerybutton" class="button"><img class="rightpadbutton" alt="" src="img/gallery.png" onclick="createGallery()"/>Gallery</p>
+            <p id="latestnotesbutton" class="button"><img class="rightpadbutton" alt="" src="img/popularnotes.png" onclick="popularNotesAPI()"/>Popular</p>
+            <p id="mynotesbutton" class="button"><img class="rightpadbutton" alt="" src="img/mynotesyellow.png" onclick="myNotesAPI()" /><br />My Notes</p>
+    </div>
+    <div id="viewholder">
+    </div>
+    <div id="toppad">
+        <table width="100%">
+            <tr>
+                <td class="tableElementButton"><a href="#"></a><img alt="" src="img/mynotesyellow.png" onclick="myNotesAPI()" /><br />My Notes</td>
+                <td class="tableElementButton"><a href="#"></a><img alt="" src="img/popularnotes.png" onclick="popularNotesAPI()"/>Popular</td>
+                <td class="tableElementButton"><a href="#"></a><img alt="" src="img/gallery.png" onclick="createGallery()"/>Gallery</td>
+                <td class="tableElementButton"><a href="#"></a><img alt="" src="img/camerayellow.png" onclick="takePhoto()"/>New Note</td>
+            </tr>
+        </table> 
+    </div>
+    </body>
+</html>

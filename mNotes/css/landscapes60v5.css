@@ -1,0 +1,59 @@
+#rightbuttons{display:none;}
+#viewholder{height:0px; width:560px;}
+#topbar{display:none;}
+#leftbar{display:none;}
+#toppad{display:none; position:absolute; top:0px; color:Black;}
+#s60v3rightpad{
+    width:80px;
+    position:fixed;
+    display:block;
+    font-weight:normal;
+    font-size:medium;
+    right:0px;
+    top:0px;
+    text-align:center;
+    background-color:#dbdbdb;
+    color:Black;
+}
+#spacinghack{display:none;}
+.uploadImage{width:100%; height:auto; text-align:center}
+.rightpadbutton{width:64px; height:auto; text-align:center}
+.NavigationButtonImage{width:100px; height:auto;}
+.body{font-size:medium; color:White; background-color:Black;} 
+.tableElement{
+    width:50%;
+    background-color:#dbdbdb;
+    text-align:center;
+    color:Black;
+    height:32px;
+}
+.tableElement:hover{background-color:#fdc927;} 
+.details{
+    color: gray;
+    margin:0px 0px 0px 0px;
+    font-size:small;
+}
+.notetext{
+    margin:8px 0px 8px 0px;
+    font-size:large;
+    font-weight:normal;
+}
+.username{
+    color: gray;
+    margin:0px 0px 5px 0px;
+    font-size:small;
+}
+.NavigationButtonText{color:White;}
+.ListView{background-color:Black;}
+.button{margin:0px 0px 0px 0px;}
+.button:hover{background-color:#fdc927;}
+.tableElementButton{
+    background-color:#dbdbdb;
+    margin:0px 0px 0px 0px;
+    width:25%;
+    text-align:center;
+}
+.tableElementButton:hover
+{
+    background-color:#fdc927;
+}
